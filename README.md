@@ -4,9 +4,9 @@
 This repository contains the source code for the [Signapse App](https://signapse.app). Signapse is an Android App for realtime recognition of german road signs. Originally developed in 2017 using early versions of TensorFlowLite. The processing of camera images was implemented in C++ for performance reasons. 
 
 **Code Quality**
-The code is complete and fully commented using Doxygen comments. You can generate 
+The code is 100% complete and fully commented using doxygen. You can generate the documentation using generate_docs.bat.
 
-#### Intalling current version from PlayStore
+#### Installing the current version from PlayStore
 
 1. Checkout Signapse on [Google Playstore](https://play.google.com/store/apps/details?id=de.swp.tsd.trafficsigndetection) 
 2. Install App
@@ -39,13 +39,13 @@ make all
 After successfully compiling the RoadSignAPI, you can open the App project in Android studio and compile it.
 
 
-## Neuronale Netzwerke
+## Neural Networks
 
-### Detektion
+### Detection
 
 Detailed instructions on how to train and export the road sign detection model (SSDLite) can be found in the [Readme of the MLModels subdirectory](MLModels/Detection/ReadMe.md) (instructions in german).
 
-### Klassifikation
+### Classification
 
 To train the classifier, execute the script [`MLModels/Classification/mobilenetv2.py`](MLModels/Classification/mobilenetv2.py).
 
