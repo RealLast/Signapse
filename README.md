@@ -3,13 +3,22 @@
 
 This repository contains the source code for the [Signapse App](https://signapse.app). Signapse is an Android App for realtime recognition of german road signs. Originally developed in 2017 using early versions of TensorFlowLite. The processing of camera images was implemented in C++ for performance reasons. 
 
+
+
 **Code Quality**
 The code is 100% complete and fully commented using doxygen. You can generate the documentation using generate_docs.bat.
+
+**Purpose**
+The purpose of this application is to detect german road signs from an incoming camera image stream on smartphones. For this, the smartphone has to be mounted on the wind shield ensuring the camera has an unobstructed view of the road ahead. Images are analyzed with a frequency of ~10FPs. In a first step, a detector (based on SSDLite) identifies all signs on the camera image and extracts a bounding box for each. Each detected sign is subsequently analyzed separately by a classificator (based on MobileNetV2). Lastly, signs on the same pole will be grouped together and displayed in the application. Based on the detected sign, the App identifies the current speed limit and triggers a warning when overspeeding.
+![image](Graphics/detector_screenshot.png)
+
 
 #### Installing the current version from PlayStore
 
 1. Checkout Signapse on [Google Playstore](https://play.google.com/store/apps/details?id=de.swp.tsd.trafficsigndetection) 
 2. Install App
+
+
 
 #### Build App using Android Studio
 
