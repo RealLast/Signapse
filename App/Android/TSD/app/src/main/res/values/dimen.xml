@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="base_0.125x">0.5dp</dimen>
+    <dimen name="base_0.25x">1dp</dimen>
+    <dimen name="base_0.5x">2dp</dimen>
+    <dimen name="base_1x">4dp</dimen>
+    <dimen name="base_2x">8dp</dimen>
+    <dimen name="base_2.5x">10dp</dimen>
+    <dimen name="base_3x">12dp</dimen>
+    <dimen name="base_4x">16dp</dimen>
+    <dimen name="base_5x">20dp</dimen>
+    <dimen name="base_6x">24dp</dimen>
+    <dimen name="base_7x">28dp</dimen>
+    <dimen name="base_8x">32dp</dimen>
+    <dimen name="base_9x">36dp</dimen>
+    <dimen name="base_10x">40dp</dimen>
+    <dimen name="base_11x">44dp</dimen>
+    <dimen name="base_12x">48dp</dimen>
+    <dimen name="base_13x">52dp</dimen>
+    <dimen name="base_14x">56dp</dimen>
+    <dimen name="base_15x">60dp</dimen>
+    <dimen name="base_16x">64dp</dimen>
+    <dimen name="base_17x">68dp</dimen>
+    <dimen name="base_18x">72dp</dimen>
+    <dimen name="base_19x">76dp</dimen>
+    <dimen name="base_20x">80dp</dimen>
+    <dimen name="base_21x">84dp</dimen>
+    <dimen name="base_22x">88dp</dimen>
+    <dimen name="base_23x">92dp</dimen>
+    <dimen name="base_24x">96dp</dimen>
+</resources>

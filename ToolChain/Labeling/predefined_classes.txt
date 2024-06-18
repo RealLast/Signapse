@@ -1,0 +1,108 @@
+(Nicht in dieser Liste vorhanden, aber relevant)
+(Sonstiges, weiss)
+(Sonstiges, rot/weiss)
+(Sonstiges, rot/blau)
+(Sonstiges, blau)
+(Sonstiges, gelb)
+(Sonstiges, gruen)
+(Sonstiges, braun)
+Vorfahrt
+Zusatzschild
+5 km/h, Beginn - Hoechstgeschwindigkeit
+10 km/h, Beginn - Hoechstgeschwindigkeit
+20 km/h, Beginn - Hoechstgeschwindigkeit
+30 km/h, Beginn - Hoechstgeschwindigkeit
+40 km/h, Beginn - Hoechstgeschwindigkeit
+50 km/h, Beginn - Hoechstgeschwindigkeit
+60 km/h, Beginn - Hoechstgeschwindigkeit
+70 km/h, Beginn - Hoechstgeschwindigkeit
+80 km/h, Beginn - Hoechstgeschwindigkeit
+90 km/h, Beginn - Hoechstgeschwindigkeit
+100 km/h, Beginn - Hoechstgeschwindigkeit
+110 km/h, Beginn - Hoechstgeschwindigkeit
+120 km/h, Beginn - Hoechstgeschwindigkeit
+130 km/h, Beginn - Hoechstgeschwindigkeit
+5 km/h, Beginn - Mindestgeschwindigkeit
+10 km/h, Beginn - Mindestgeschwindigkeit
+20 km/h, Beginn - Mindestgeschwindigkeit
+30 km/h, Beginn - Mindestgeschwindigkeit
+40 km/h, Beginn - Mindestgeschwindigkeit
+50 km/h, Beginn - Mindestgeschwindigkeit
+60 km/h, Beginn - Mindestgeschwindigkeit
+70 km/h, Beginn - Mindestgeschwindigkeit
+80 km/h, Beginn - Mindestgeschwindigkeit
+5 km/h, Ende - Hoechstgeschwindigkeit
+10 km/h, Ende - Hoechstgeschwindigkeit
+20 km/h, Ende - Hoechstgeschwindigkeit
+30 km/h, Ende - Hoechstgeschwindigkeit
+40 km/h, Ende - Hoechstgeschwindigkeit
+50 km/h, Ende - Hoechstgeschwindigkeit
+60 km/h, Ende - Hoechstgeschwindigkeit
+70 km/h, Ende - Hoechstgeschwindigkeit
+80 km/h, Ende - Hoechstgeschwindigkeit
+90 km/h, Ende - Hoechstgeschwindigkeit
+100 km/h, Ende - Hoechstgeschwindigkeit
+110 km/h, Ende - Hoechstgeschwindigkeit
+120 km/h, Ende - Hoechstgeschwindigkeit
+130 km/h, Ende - Hoechstgeschwindigkeit
+5 km/h, Ende - Mindestgeschwindigkeit
+10 km/h, Ende - Mindestgeschwindigkeit
+20 km/h, Ende - Mindestgeschwindigkeit
+30 km/h, Ende - Mindestgeschwindigkeit
+40 km/h, Ende - Mindestgeschwindigkeit
+50 km/h, Ende - Mindestgeschwindigkeit
+60 km/h, Ende - Mindestgeschwindigkeit
+70 km/h, Ende - Mindestgeschwindigkeit
+80 km/h, Ende - Mindestgeschwindigkeit
+Ende saemtlicher Streckenverbote
+20er-Zone, Beginn
+30er-Zone, Beginn
+20er-Zone, Ende
+30er-Zone, Ende
+Ortseingangsschild
+Ortsausgangsschild
+Spielstrasse, Beginn
+Spielstrasse, Ende
+Autobahn, Beginn
+Autobahn, Ende
+Kraftfahrstrasse, Beginn
+Kraftfahrstrasse, Ende
+Fahrstreifentafel ohne Gegenverkehr - zweistufig (Hoechstgeschwindigkeit)
+Fahrstreifentafel ohne Gegenverkehr - dreistreifig (Hoechstgeschwindigkeit)
+Fahrstreifentafel ohne Gegenverkehr - zweistreifig (Mindestgeschwindigkeit)
+Fahrstreifentafel mit Gegenverkehr - zweistreifig in Fahrtrichtung und einstreifig in Gegenrichtung (Mindestgeschwindigkeit)
+Fahrstreifentafel mit Gegenverkehr - zweistreifig in Fahrtrichtung und zweistreifig in Gegenrichtung (Mindestgeschwindigkeit)
+auf ... m
+auf ... km
+noch ... km
+nach ... m
+in ... km
+in ... m
+zeitliche Beschraenkung (16-18 h)
+zeitliche Beschraenkung (8-11 h, 16-18 h)
+ab Zeitpunkt
+Laermschutz mit Zeitangabe
+Schulweg in Verbindung mit zeitlicher Begrenzung
+werktags
+werktags 18-19 h
+werktags 8.30-11.30 h, 16-18 h
+werktags ...-...
+werktags ...-..., ...-...
+Mo-Fr, 16-18 h
+Di, Do, Fr, 16-18 h
+6-22 h an Sonn- und Feiertagen
+werktags ausser samstags
+Sa und So
+Schulweg in Verbindung mit zeitlicher Begrenzung an Werktagen
+bei Naesse
+Baustelle
+Doppelkurve (zunaechst links)
+Doppelkurve (zunaechst rechts)
+Fahrbahnverengung (links)
+Fahrbahnverengung (rechts)
+Fahrbahnverengung (beidseitig)
+Kurve (links)
+Kurve (rechts)
+Lichtzeichenanlage
+Fussgaengerueberweg (Gefahrenzeichen)
+Gefahrenzeichen

@@ -1,0 +1,52 @@
+/**@page classificationPage Training des Klassifikationsnetzwerks
+ * Zum Trainieren des Klassifikator muss die Datei `NeuralNetwork/
+ * Classification/mobilenetv2.py` per Kommandozeile aufgerufen werden. 
+ * \n\n
+ * Das Trainingsskript musste sehr kurzfristig umgestaltet und auf das
+ * Framework _Keras_ umgebaut werden, da ein nicht näher klärbarer Bug in
+ * TensorFlow aufgetreten ist. Daher war es bisher nicht möglich das Skript
+ * komfortabel mit Kommandozeilenparametern auszustatten. Stattdessen befinden
+ * sich diese im Kopf des Skripts. Die Wichtigsten sollen im Folgenden kurz
+ * erklärt werden:
+ * \n\n
+ * Zum einen die Pfade zu den Datensätzen zum Training bzw. zur Validierung:
+ * ~~~{.py}
+ * train_data_path = '/datasets/swp2018/split_img/train'
+ * validation_data_path = '/datasets/swp2018/split_img/validation'
+ * ~~~
+ *
+ * Außerdem die Anzahl der Trainingsdateien sowie deren Größe und die Anzahl
+ * der Klassen:
+ * ~~~{.py}
+ * file_count_train = 134443
+ * image_size = 96
+ * classes = 47
+ * ~~~
+ *
+ * Desweiteren die für Neuronale Netzwerke üblichen Parameter:
+ * ~~~{.py}
+ * epochs = 200
+ * batch_size = 128
+ * learn_rate = 0.045
+ * decay = 0.00004
+ * momentum = 0.9
+ * ~~~
+ * 
+ * Sowie den für MobileNet spezifischen Alpha-Parameter welcher die Anzahl der
+ * Filter pro Schicht ändert. Die genauere Bedeutung/Verwendung kann aus dem
+ * entsprechenden Paper unter https://arxiv.org/pdf/1704.04861.pdf entnommen
+ * werden:
+ * ~~~{.py}
+ * alpha_val = 0.35
+ * ~~~
+ * \n\n
+ * Nach dem Abschluss einer Epoche werden die Gewichte des Netzwerks
+ * automatisch gespeichert. Beim Beenden des Trainings soll aus diesen das
+ * Optimum (anhand selbst festgelegter Kriterien) ausgewählt werden.\n
+ * Zur Umwandlung dieser Datei in das TensorFlow-Datenformat kann der Befehl
+ * ~~~{.py}
+ * python keras_to_tensorflow.py -input_model weights.hdf5
+ * ~~~
+ * genutzt werden. Wobei `weights.hdf5` die gewünschte Gewichts-Datei darstellt.
+ * 
+ **/

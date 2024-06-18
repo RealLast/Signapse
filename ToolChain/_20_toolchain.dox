@@ -1,0 +1,61 @@
+/**@page toolchainPage Tool-Chain
+ * @image latex toolchain.png width=15cm
+ * __[1a]__ Es werden einzelne Frames aus den Videodateien extrahiert, um diese Frame für Frame zu labeln.
+ * \n
+ * Skript aus ToolChain/Labeling/  
+ * \n
+ * `video_to_frames.py -i input_video.mp4 -o output_folder/`
+ * \n\n\n
+ * __[1b]__ Da sowohl der verwendete Datensatz GTSDB als auch GTSRB Bilder im .ppm-Format vorliegen, werden diese in .png umgewandelt.
+ * \n
+ * Dies geht mit dem Skript aus ToolChain/Dataset:
+ * \n
+ * `ppm_to_png.py -i input_folder -o output_folder`
+ * \n\n\n
+ * __[2]__ Manuell werden Frames aussortiert, auf welchen keine gut sichtbaren Verkehrszeichen 
+ * vorhanden ersichtlich sind. Diese können in Bereichen angegeben werden. Wenn sich z.B. auf den Bildern 203 bis 250 keine VZ befinden kann dies in eine CSV 
+ * Datei eingetragen werden, welche sich in dem in Schritt __[1]__ erstellten Unterordner befindet. Wenn man alle Bereiche angegeben hat, kann man diese mit dem 
+ * Skript aus `ToolChain/Labeling/` wie folgt löschen:
+ * \n
+ * `delete_from_csv.py -i output_folder`
+ * \n 
+ * output_folder ist der Ordner aus Schritt __[1]__ 
+ * \n\n\n
+ * __[3]__ Mit der Software _“LabelImg”_ wird der `output_folder` (Schritt __[1]__) geöffnet. Dort muss für jedes Bild eine rechteckige Bounding-Box angelegt werden und die korrekte Klasse ausgewählt werden. 
+ * Diese Klassen befinden sich in: `ToolChain/Labeling/predefined_classes.txt`
+ * \n\n\n
+ * __[4]__ Die Metadaten, welche zuvor mit LabelImg erstellt wurden, werden für eine einfacherer Handhabung von einzelnen 
+ * .xml-Dateien (Beim Bearbeiten von LabelImg erstellt worden) in eine CSV-Datei umgewandelt. Dies ist mit dem Skript aus `ToolChain/Dataset` wie folgt realisierbar:
+ * \n
+ * `xml_to_csv.py -i input_folder_with_xml -o output.csv -o output_folder`
+ * \n\n\n
+ * __[5a]__ Da in Schritt __[3]__ die Klassen mit Trivialnamen benannt wurden und dies teilweise unübersichtlich ist, werden die Klassenamen in ihre Beziechung nach 
+ * StVZO umbenannt. Dies geht mit dem Skript aus `ToolChain/Dataset`:
+ * \n
+ * `translate_by_csv.py -i labels_old.csv -d dict.csv -c class -o labels_new.csv`
+ * \n
+ * Hierbei ist dict.csv im Ordner `ToolChain/Dataset/CSVs/` eine CSV, welche die entsprechende Umbenennung kennt.
+ * \n\n\n
+ * __[5b]__ Die gleiche Problematik wie in __[5a]__ tritt auch bei den GTS-Datensätzen auf. Die Übersetzung kann allerdings direkt mithilfe des ppm_to_png-Skriptes durchgeführt werden. 
+ * Dafür müssen nur zusätzlich der Parameter `-dict` mit dem Pfad zu einer Dictionary-CSV befriedigt werden, so wie das Rekursiv-Flag (`-r`) gesetzt werden um auch Unterordner einzubeziehen.
+ * \n\n\n
+ * __[6]__ Für den Klassifikationsdatensatz, müssen die Verkehrszeichen aus den großen Bilderen ausgeschnitten werden und auf eine Größe von 96x96 skaliert werden. 
+ * Hierbei werden die gleichen Kriterien wie beim verwendeten Datensatz GTSRB eingehalten. Dieses besteht daraus, dass die Bounding-Box entweder 5 Pixel oder 10% der Breite, 
+ * je nachdem was größer in alle Richtungen erweitert. Um ledigliche die Verkehrszeichen aus den Bildern auszuschneiden, muss folgendes Skript aus `ToolChain/Dataset` ausgeführt werden:
+ * \n
+ * `extract_sign_from_image.py -i input_folder -l labels.csv`
+ * \n\n
+ * Um den Datensatz zu erweitern, wurde mit einem weiteren Skript eine leichte Rotation und eine leichte Verschiebung der Bounding-Box eingeführt. 
+ * In dem im folgenden verwendeten Skript lassen sich diese Parameter um Zeile 439 Parameter einstellen.
+ * Dies gelten als obere Grenze und es wird jedes Bild, mit zufälligen Werten, welche von besagten Parametern begrenzt werden, acht weitere Bild generiert.
+ * Dies erlaubt das Skript aus `ToolChain/Dataset`:
+ * ´rotate_and_offset.py -i input_folder -l labels.csv -o output_folder`
+ * \n\n\n
+ * __[7a][7b]__ Für die Detektion müssen die Bilder auf 300x300 herunterskaliert werden, da das verwendete Neuronale Netzwerk (_SSDLite_) dies als Eingabegröße besitzt.
+ * Dies kann mit dem Skript aus ToolChain/Dataset getan werden:
+ * `resize_dataset.py -i input_folder -l labels.csv -o output_folder -s scale_size`
+ * Wobei scale_size in diesem Fall 300 wäre, damit das Bild auf 300x300 skaliert wird.
+ * \n
+ * Hierbei wird das Bild verzerrt, da kein _Zero-Padding_ angewandt wird.
+ *
+ **/

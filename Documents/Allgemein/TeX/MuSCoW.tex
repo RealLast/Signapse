@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MuSCoW Naming                                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\must}[1]{$\llbracket$#1$\rrbracket$}
+%\newcommand{\should}[1]{$[$#1$]$}
+%\newcommand{\could}[1]{$($#1$)$}
+%\newcommand{\wont}[1]{$!$#1$!$}
+
+\newcounter{musts}
+\setcounter{musts}{0}
+\newcounter{shoulds}
+\setcounter{shoulds}{0}
+\newcounter{coulds}
+\setcounter{coulds}{0}
+\newcounter{wonts}
+\setcounter{wonts}{0}
+
+\newcounter{chaprequirements}
+\setcounter{chaprequirements}{0}
+
+\newcommand*{\currentchapter}{Not set yet.}
+
+\makeatletter
+\xpretocmd{\@chapter}
+{%
+    \renewcommand*{\currentchapter}{#1}%
+    \setcounter{chaprequirements}{0}%
+}{}{}
+\makeatother
+
+\makeatletter
+\xpretocmd{\section}
+{%
+    \setcounter{chaprequirements}{0}%
+}{}{}
+\makeatother
+
+\newcommand*{\chaplet}{\substring[v]{\currentchapter}{1}{1}}
+\newcommand*{\chapnum}{\substring[v]{\thesection}{1}{1}}
+\newcommand*{\secnum}{\substring[v]{\thesection}{3}{3}}
+\newcommand*{\reqcount}{\twodigit{\thechaprequirements}}
+
+\newcommand*{\IDcode}{\chaplet\chapnum\secnum\reqcount}
+
+\newcommand*{\musttext}{$\llbracket$\IDcode$\rrbracket$}
+\newcommand*{\shouldtext}{$[$\IDcode$]$}
+\newcommand*{\couldtext}{$($\IDcode$)$}
+\newcommand*{\wonttext}{$!$\IDcode$!$}
+
+\newcommand*{\must}
+{%
+    \refstepcounter{musts}%
+    \stepcounter{chaprequirements}%
+    \musttext%
+    %\label{#1}%
+}
+
+\newcommand*{\should}
+{%
+    \refstepcounter{shoulds}%
+    \stepcounter{chaprequirements}%
+    \shouldtext%
+    %\label{#1}%
+}
+
+\newcommand*{\could}
+{%
+    \refstepcounter{coulds}%
+    \stepcounter{chaprequirements}%
+    \couldtext%
+    %\label{#1}%
+}
+
+\newcommand*{\wont}
+{%
+    \refstepcounter{wonts}%
+    \stepcounter{chaprequirements}%
+    \wonttext%
+    %\label{#1}%
+}
+
+\newcommand*{\mustref}[1]
+{%
+    $\llbracket$#1$\rrbracket$%
+}
+
+\newcommand*{\shouldref}[1]
+{%
+    $[$#1$]$%
+}
+
+\newcommand*{\couldref}[1]
+{%
+    $($#1$)$%
+}
+
+\newcommand*{\wontref}[1]
+{%
+    $!$#1$!$%
+}
+
+\newcommand{\accref}[1]
+{%
+    $/$#1$/$%
+}
+
+%\crefname{musts}{}{}
+%\creflabelformat{musts}{%
+%   \addtocounter{chaprequirements}{-1}%
+%    \musttext%
+%    intern: #1
+%    \addtocounter{chaprequirements}{1}%
+%}
+%
+%\crefname{shoulds}{}{}
+%\creflabelformat{shoulds}{%
+%    \addtocounter{chaprequirements}{-1}%
+%    \shouldtext%
+%    intern: #1
+%    \addtocounter{chaprequirements}{1}%
+%}
+%\crefname{coulds}{}{}
+%\creflabelformat{coulds}{%
+%    \addtocounter{chaprequirements}{-1}%
+%    \couldtext%
+%    intern: #1
+%    \addtocounter{chaprequirements}{1}%
+%}
+%\crefname{wonts}{}{}
+%\creflabelformat{wonts}{%
+%    \addtocounter{chaprequirements}{-1}%
+%    \wonttext%
+%    intern: #1
+%    \addtocounter{chaprequirements}{1}%
+%}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/privacyIntroductionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_introduction"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dataCollectionLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_4x"
+        android:text="@string/privacy_data_collection_label"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/onBackground"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privacyIntroductionTextView" />
+
+    <TextView
+        android:id="@+id/dataCollectionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_2x"
+        android:layout_marginTop="@dimen/base_2x"
+        android:text="@string/privacy_data_collection"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/dataCollectionLabelTextView"
+        app:layout_constraintStart_toStartOf="@+id/dataCollectionLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/dataCollectionLabelTextView" />
+
+
+    <TextView
+        android:id="@+id/cameraDataLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_4x"
+        android:text="@string/privacy_camera_data_label"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/onBackground"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataCollectionTextView" />
+
+    <TextView
+        android:id="@+id/cameraDataTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_2x"
+        android:layout_marginTop="@dimen/base_2x"
+        android:text="@string/privacy_camera_data"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/cameraDataLabelTextView"
+        app:layout_constraintStart_toStartOf="@+id/cameraDataLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/cameraDataLabelTextView" />
+
+
+    <TextView
+        android:id="@+id/locationDataLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_4x"
+        android:text="@string/privacy_location_data_label"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/onBackground"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cameraDataTextView" />
+
+    <TextView
+        android:id="@+id/locationDataTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_2x"
+        android:layout_marginTop="@dimen/base_2x"
+        android:text="@string/privacy_location_data"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/locationDataLabelTextView"
+        app:layout_constraintStart_toStartOf="@+id/locationDataLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/locationDataLabelTextView" />
+
+
+    <TextView
+        android:id="@+id/basisLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_4x"
+        android:text="@string/privacy_basis_label"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/onBackground"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationDataTextView" />
+
+    <TextView
+        android:id="@+id/basisTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_2x"
+        android:layout_marginTop="@dimen/base_2x"
+        android:text="@string/privacy_basis"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/basisLabelTextView"
+        app:layout_constraintStart_toStartOf="@+id/basisLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/basisLabelTextView" />
+
+
+    <TextView
+        android:id="@+id/revocationLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_4x"
+        android:text="@string/privacy_revocation_label"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/onBackground"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/basisTextView" />
+
+    <TextView
+        android:id="@+id/revocationTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_2x"
+        android:layout_marginTop="@dimen/base_2x"
+        android:text="@string/privacy_revocation"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/revocationLabelTextView"
+        app:layout_constraintStart_toStartOf="@+id/revocationLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/revocationLabelTextView" />
+
+
+    <TextView
+        android:id="@+id/publisherLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_4x"
+        android:text="@string/publisher_label"
+        android:textStyle="bold"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revocationTextView" />
+
+    <TextView
+        android:id="@+id/publisherTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_2x"
+        android:layout_marginStart="@dimen/base_2x"
+        android:layout_marginTop="@dimen/base_2x"
+        android:text="@string/publisher"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/publisherLabelTextView"
+        app:layout_constraintStart_toStartOf="@+id/publisherLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/publisherLabelTextView" />
+
+</android.support.constraint.ConstraintLayout>

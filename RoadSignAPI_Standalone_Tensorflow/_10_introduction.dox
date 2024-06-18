@@ -1,0 +1,7 @@
+/**@page introPage Einleitung
+ * Die Filterverwaltungs-Bibliothek ist nach dem Pipes-and-Filters-Prinzip aufgebaut. Dieses ist ein gängiges Architekturmuster für Systeme, die Datenströme verarbeiten. In unserem Fall bestehen diese aus (einer Folge von) Einzelbildern mit einem Header, in dem Zusatzinformationen Platz finden.
+ * Ein Filter stellt dabei einen Verarbeitungsschritt dar, wobei jeder Filter der Pipe ein Bild entgegennimmt und auch wieder ein Bild herausgibt. Darüber hinaus kann jeder Filter dem Datenpaket bestimmte Metainformationen beifügen, die später für eine genauere Analyse verwendet werden können. Wenn beispielsweise ein Filter ein Verkehrszeichen auf einem Bild an einer bestimmten Position detektiert und im darauffolgenden Filter das Verkehrszeichen klassifiziert wird, wird neben dem Zuschneiden des Bildes auf das erkannte Verkehrszeichen auch die Position des Verkehrszeichens im Original als Metainformation gespeichert. Dies ist eine Abwandlung der herkömmlichen Pipes-and-Filters-Architektur.
+ * Weiterhin ist es möglich, dass sich die Pipeline nach bestimmten Verarbeitungsschritten in mehrere untergeordnete Pipes aufteilt: Werden auf einem Bild mehrere Verkehrszeichen erkannt, wird der Filter für die Klassifikation  für alle Kandidaten aufgerufen (ggf. parallel).
+ *
+ *
+**/

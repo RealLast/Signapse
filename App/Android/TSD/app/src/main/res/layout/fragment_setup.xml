@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_4x"
+        android:layout_marginEnd="@dimen/base_4x"
+        android:elevation="@dimen/base_3x"
+        android:background="@drawable/button_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="openDetectorFragment"
+        android:text="@string/start"
+        android:textSize="18sp"
+        android:textColor="@color/onPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/setupScrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/throttlingHintSetupCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_2x"
+                android:layout_marginEnd="@dimen/base_2x"
+                android:layout_marginStart="@dimen/base_2x"
+                android:layout_marginTop="@dimen/base_2x"
+                android:background="@drawable/card_background"
+                android:elevation="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,2:3"
+                app:layout_constraintEnd_toStartOf="@id/cutoffWarningHintSetupCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/progress1TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:text="@string/progress"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/throttlingHintTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginEnd="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:layout_marginTop="@dimen/base_4x"
+                    android:text="@string/throttling_hint"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textColor="@color/onSurface"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cutoffWarningHintSetupCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_2x"
+                android:layout_marginEnd="@dimen/base_2x"
+                android:layout_marginTop="@dimen/base_2x"
+                android:background="@drawable/card_background"
+                android:elevation="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,3:2"
+                app:layout_constraintEnd_toStartOf="@id/improvementHintSetupCard"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/progress2TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:text="@string/progress"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/cutoffWarningHintTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginEnd="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:layout_marginTop="@dimen/base_4x"
+                    android:text="@string/cutoff_warning_hint"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textColor="@color/onSurface"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/improvementHintSetupCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_2x"
+                android:layout_marginEnd="@dimen/base_2x"
+                android:layout_marginTop="@dimen/base_2x"
+                android:background="@drawable/card_background"
+                android:elevation="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,3:2"
+                app:layout_constraintEnd_toStartOf="@id/firstSetupCard"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/progress3TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:text="@string/progress"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/improvementHintTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginEnd="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:layout_marginTop="@dimen/base_4x"
+                    android:text="@string/improvement_hint"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textColor="@color/onSurface"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/firstSetupCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_2x"
+                android:layout_marginEnd="@dimen/base_2x"
+                android:layout_marginTop="@dimen/base_2x"
+                android:background="@drawable/card_background"
+                android:elevation="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,3:2"
+                app:layout_constraintEnd_toStartOf="@id/secondSetupCard"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/progress4TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:text="@string/progress"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/firstHintTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginEnd="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:layout_marginTop="@dimen/base_4x"
+                    android:text="@string/power_hint"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textColor="@color/onSurface"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/secondSetupCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_2x"
+                android:layout_marginEnd="@dimen/base_2x"
+                android:layout_marginTop="@dimen/base_2x"
+                android:background="@drawable/card_background"
+                android:elevation="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,3:2"
+                app:layout_constraintEnd_toStartOf="@id/thirdSetupCard"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/progress5TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:text="@string/progress"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/secondHintTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginEnd="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:layout_marginTop="@dimen/base_4x"
+                    android:text="@string/position_hint"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textColor="@color/onSurface"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/thirdSetupCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_2x"
+                android:layout_marginEnd="@dimen/base_2x"
+                android:layout_marginTop="@dimen/base_2x"
+                android:background="@drawable/card_background"
+                android:elevation="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,4:5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/progress6TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:text="@string/progress"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/centerView"
+                    android:layout_width="@dimen/base_12x"
+                    android:layout_height="@dimen/base_12x"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/rollTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textColor="@color/onBackground"
+                    app:layout_constraintEnd_toEndOf="@+id/centerView"
+                    app:layout_constraintStart_toStartOf="@+id/centerView"
+                    app:layout_constraintTop_toBottomOf="@+id/centerView" />
+
+                <TextView
+                    android:id="@+id/pitchTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_2x"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textColor="@color/onBackground"
+                    app:layout_constraintBottom_toBottomOf="@+id/centerView"
+                    app:layout_constraintStart_toEndOf="@+id/centerView"
+                    app:layout_constraintTop_toTopOf="@+id/centerView" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/base_4x"
+                    android:layout_marginEnd="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:layout_marginTop="@dimen/base_4x"
+                    android:src="@drawable/smartphone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="h,410:870"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hintTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_4x"
+                    android:layout_marginStart="@dimen/base_4x"
+                    android:layout_marginTop="@dimen/base_4x"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textColor="@color/onSurface"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </HorizontalScrollView>
+
+</android.support.constraint.ConstraintLayout>

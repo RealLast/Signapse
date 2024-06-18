@@ -1,0 +1,282 @@
+\begin{appendix}
+
+\chapter{Sonstiges}
+\renewcommand{\arraystretch}{1.25}
+\section{Verwendete Entwicklungswerkzeuge}
+\begin{longtabu}{l X[j]}
+    \bfseries TensorFlow & \glslink{Deep Learning}{Deep-Learnung}-Bibliothek für Python / C++\\
+    &\\
+    \bfseries Anaconda & Python-Distribution\\
+    &\\
+    \bfseries \gls{TensorFlow Lite} &  \glslink{Deep Learning}{Deep-Learnung}-Bibliothek, für mobile Endgeräte optimiert\\
+    &\\
+    \bfseries \gls{TensorFlow Mobile} &  \glslink{Deep Learning}{Deep-Learnung}-Bibliothek, für Endgeräte optimiert (allerdings weniger als TensorFlow Lite, dafür derzeit noch höhere Kompatibilität zu bestehenden Netzen)\\
+    &\\
+    \bfseries OpenCV & Bibliothek zur Bildverarbeitung; in diesem Projekt für Rescaling verwendet
+    &\\
+    \bfseries Visual Studio 2017 & Entwicklungsumgebung, hier: für C++ genutzt\\
+    &\\
+    \bfseries Visual Paradigm & UML-Werkzeug\\
+    &\\
+    \bfseries Visual Studio Code & Entwicklungsumgebung, hier: für Python genutzt\\
+    &\\
+    \bfseries Android Studio & Entwicklungsumgebung, hier: für Umsetzung der AndroidApp in Java, XML und Anbindung an C++ über Java Native Interface\\
+    &\\
+    \bfseries Notepad++ & Texteditor für alle Dokumente, die nicht mit anderen Entwicklungswerkzeugen bearbeitet werden z.B. ReadMes\\
+    &\\
+    \bfseries GitLab & zur Versionskontrolle, Bugtracking, Einhaltung von Coding Rules \\
+    &\\
+    \bfseries LabelImg\footnotemark & für das \glslink{Label}{Labeln} von \glslink{Sample}{Samples}
+    &\\
+    \bfseries Doxygen & zur automatisierten Erstellung der Entwicklerdokumentation
+    &\\
+\end{longtabu}
+\footnotetext{\link{https://github.com/tzutalin/labelImg}, 01.05.2018}
+
+\pagebreak
+\renewcommand{\arraystretch}{1.5}
+\section{Liste der zu erkennenden Verkehrzeichen}
+\label{sec:liste_zu_erkennende_verkehrszeichen}
+Hier werden alle Verkehrszeichen gelistet, welche erkannt werden müssen, um den Nutzer fehlerfrei auf eventuelle Geschwindigkeitsüber- oder unterschreitungen aufmerksam zu machen.\\
+Die grau hinterlegten Verkehrszeichen sind nicht Teil des verwendeten Datensatzes der Ruhr-Universität Bochum, werden aber im Lastenheft gefordert. Für diese Verkehrszeichen kann mangels Trainingsdaten keine ideale Erkennungsrate garantiert werden.\\
+Die Risikoeinschätzung beschreibt, für wie schwierig es erachtet wird, entsprechende Aufnahmen solcher Schilder auf Stadt- und Autobahnfahrten zu machen bzw. wie selten diese dabei auftreten werden. Risikoeinschätzungen von \glqq{}Hoch\grqq{} oder \glqq{}Sehr Hoch\grqq{} weisen explizit darauf hin, dass diese Schilder möglicherweise - aufgrund unzureichender Datensätze - nicht sicher erkannt und klassifiziert werden können.\\
+
+\begin{longtabu}{l X[j] l}
+\hline
+\bf Nummerierung & \bf Bezeichnung &\bf Risiko\\
+\hline
+\hl \gls	{VZ}	274-5	&  \hl	zulässige Höchstgeschwindigkeit 5 km/h	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	274-10	&  \hl	zulässige Höchstgeschwindigkeit 10 km/h	& \hl	Hoch	\\ \hline
+    \gls	{VZ}	274-20	&	zulässige Höchstgeschwindigkeit 20 km/h	&	Gering	\\ \hline
+    \gls	{VZ}	274-30	&	zulässige Höchstgeschwindigkeit 30 km/h	&	Gering	\\ \hline
+\hl \gls	{VZ}	274-40	&  \hl	zulässige Höchstgeschwindigkeit 40 km/h	& \hl	Hoch	\\ \hline
+    \gls	{VZ}	274-50	&	zulässige Höchstgeschwindigkeit 50 km/h	&	Gering	\\ \hline
+    \gls	{VZ}	274-60	&	zulässige Höchstgeschwindigkeit 60 km/h	&	Gering	\\ \hline
+    \gls	{VZ}	274-70	&	zulässige Höchstgeschwindigkeit 70 km/h	&	Gering	\\ \hline
+    \gls	{VZ}	274-80	&	zulässige Höchstgeschwindigkeit 80 km/h	&	Gering	\\ \hline
+\hl \gls	{VZ}	274-90	&  \hl	zulässige Höchstgeschwindigkeit 90 km/h	& \hl	Mittel	\\ \hline
+    \gls	{VZ}	274-100	&	zulässige Höchstgeschwindigkeit 100 km/h    &	Gering	\\ \hline
+\hl \gls	{VZ}	274-110	&  \hl	zulässige Höchstgeschwindigkeit 110 km/h	& \hl	Mittel	\\ \hline
+    \gls	{VZ}	274-120	&	zulässige Höchstgeschwindigkeit 120 km/h    &	Gering	\\ \hline
+\hl \gls	{VZ}	274-130	&  \hl	zulässige Höchstgeschwindigkeit 130 km/h	& \hl	Mittel	\\ \hline
+\hl \gls	{VZ}	274.1	&  \hl	Beginn einer Tempo 30-Zone	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	274.1-20&  \hl	Beginn einer Tempo 20-Zone	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	274.2	&  \hl	Ende einer Tempo 30-Zone	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	274.2-20&  \hl	Ende einer Tempo 20-Zone	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	275-5	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 5 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	275-10	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 10 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	275-20	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 20 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	275-30	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 30 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	275-40	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 40 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	275-50	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 50 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	275-60	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 60 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	275-70	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 70 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	275-80	&  \hl	Vorgeschriebene Mindestgeschwindigkeit 80 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	278-5	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 5 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	278-10	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 10 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	278-20	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 20 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	278-30	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 30 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	278-40	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 40 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	278-50	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 50 km/h	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	278-60	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 60 km/h	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	278-70	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 70 km/h	& \hl	Hoch	\\ \hline
+    \gls	{VZ}	278-80	&	Ende der zulässigen Höchstgeschwindigkeit 80 km/h	&	Gering	\\ \hline
+\hl \gls	{VZ}	278-90	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 90 km/h	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	278-100	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 100 km/h	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	278-110	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 110 km/h	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	278-120	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 120 km/h	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	278-130	&  \hl	Ende der zulässigen Höchstgeschwindigkeit 130 km/h	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	279-5	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 5 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	279-10	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 10 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	279-20	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 20 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	279-30	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 30 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	279-40	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 40 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	279-50	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 50 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	279-60	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 60 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	279-70	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 70 km/h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	279-80	 &  \hl	Ende der vorgeschriebenen Mindestgeschwindigkeit 80 km/h	& \hl	Sehr Hoch	\\ \hline
+    \gls	{VZ}	282	    &	Ende sämtlicher Streckenverbote	&	Gering	\\ \hline
+\hl \gls	{VZ}	310	    &  \hl	Ortstafel Vorderseite (\glqq{}Ortseingangsschild\grqq)	& \hl	Mittel	\\ \hline
+\hl \gls	{VZ}	311	    &  \hl	Ortstafel Rückseite (\glqq{}Ortsausgangsschild\grqq)	& \hl	Mittel	\\ \hline
+\hl \gls	{VZ}	325.1	&  \hl	Beginn eines verkehrsberuhigten Bereichs	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	325.2	&  \hl	Ende eines verkehrsberuhigten Bereichs	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	330.1	&  \hl	Autobahn	& \hl	Mittel	\\ \hline
+\hl \gls	{VZ}	330.2	&  \hl	Ende der Autobahn	& \hl	Mittel	\\ \hline
+\hl \gls	{VZ}	331.1	&  \hl	Kraftfahrstraße	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	331.2	&  \hl	Ende der Kraftfahrstraße	& \hl	Hoch	\\ \hline
+\hl \gls	{VZ}	523-30	&  \hl	Fahrstreifentafel ohne Gegenverkehr - zweistufig (Höchstgeschwindigkeit) & \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	523-31	&  \hl	Fahrstreifentafel ohne Gegenverkehr - dreistreifig (Höchstgeschwindigkeit) & \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	525-31	&  \hl Fahrstreifentafel ohne Gegenverkehr (Mindestgeschwindigkeit) - zweistreifig & \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	 526-31	&  \hl	Fahrstreifentafel mit Gegenverkehr - zweistreifig in Fahrtrichtung und einstreifig in Gegenrichtung
+                                (Mindestgeschwindigkeit) & \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	 526-33	&  \hl	Fahrstreifentafel mit Gegenverkehr - zweistreifig in Fahrtrichtung und zweistreifig in Gegenrichtung                                                (Mindestgeschwindigkeit)	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1001-30	&  \hl	auf ... m	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1001-31	&  \hl	auf ... km	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1001-32	&  \hl  noch ... m	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1001-33	&  \hl	noch ... km	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1001-34	&  \hl	auf ... m	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1001-35	&  \hl	auf ... km	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1004-30	&  \hl	in ... m	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1004-31	&  \hl	in ... km	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1040-30	&  \hl	zeitliche Beschränkung (16-18 h)	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1040-31	&  \hl	zeitliche Beschränkung (8-11 h , 16-18 h)	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1040-34	&  \hl	ab Zeitpunkt	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1040-35	&  \hl	Lärmschutz mit Zeitangabe	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1040-36	&  \hl	Schulweg in Verbindung mit zeitlicher Begrenzung	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-30	&  \hl	werktags	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-31	&  \hl	werktags 18-19 h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-32	&  \hl	werktags 8.30-11.30 h, 16-18 h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-33	&  \hl	Mo-Fr, 16-18 h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-34	&  \hl	Di, Do, Fr, 16-18 h	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-35	&  \hl	6-22 h an Sonn- und Feiertagen	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-38	&  \hl	werktags außer samstags	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-51	&  \hl	Sa und So	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1042-53	&  \hl	Schulweg in Verbindung mit zeitlicher Begrenzung an Werktagen	& \hl	Sehr Hoch	\\ \hline
+\hl \gls	{VZ}	1053-35	&  \hl	bei Nässe	& \hl	Sehr Hoch	\\ \hline
+
+\end{longtabu}
+\pagebreak
+
+\section{Liste der im Datensatz enthaltenen und zu erkennenden Verkehrszeichen}
+\label{sec:datensatz}
+\begin{longtabu}{l X[j] r}
+\hline
+\bf Nummerierung & \bf Bezeichnung &\bf Samples\\
+\hline
+\gls	{VZ}	274-20	&	zulässige Höchstgeschwindigkeit 20 km/h	&	211	\\ \hline
+\gls	{VZ}	274-30	&	zulässige Höchstgeschwindigkeit 30 km/h	&	2221	\\ \hline
+\gls	{VZ}	274-50	&	zulässige Höchstgeschwindigkeit 50 km/h	&	2251	\\ \hline
+\gls	{VZ}	274-60	&	zulässige Höchstgeschwindigkeit 60 km/h	&	1411	\\ \hline
+\gls	{VZ}	274-70	&	zulässige Höchstgeschwindigkeit 70 km/h	&	1981	\\ \hline
+\gls	{VZ}	274-80	&	zulässige Höchstgeschwindigkeit 80 km/h	&	1861	\\ \hline
+\gls	{VZ}	274-100	&	zulässige Höchstgeschwindigkeit 100 km/h	&	1441	\\ \hline
+\gls	{VZ}	274-120	&	zulässige Höchstgeschwindigkeit 120 km/h	&	1411	\\ \hline
+\gls	{VZ}	278-80	&	Ende der zulässigen Höchstgeschwindigkeit 80 km/h	&	421	\\ \hline
+\gls	{VZ}	282	&	Ende sämtlicher Streckenverbote	&	241	\\ \hline
+\end{longtabu}
+\pagebreak
+
+\section{Liste der eigens gelabelten Verkehrszeichen}
+\label{sec:eigens_gelabelte_verkehrszeichen}
+
+Für \gls{VZ} 306 (Vorfahrtsstraße) wurde eine eigene Klasse gewählt, da sie sehr häufig vorkommen und in keine der sonstigen Klassen wirklich passen. Tatsächlich ist \gls{VZ} 306 mit großem Abstand das häufigste nicht-sonstige Verkehrszeichen in unseren \glslink{Sample}Samples.\\ 
+Die Klassen \textit{Sonstige Zusatzzeichen} und \textit{Sonstige Gefahrenzeichen} verstehen sich als Klassen für Verkehrszeichen, die zwar für uns keinen Einfluss haben (z.B. \gls{VZ} 1026-35 (Lieferverkehr frei)), also nicht klassifiziert werden sollen, aber für die Detektion durchaus sinnvoll sind. \\
+
+\begin{longtabu}{|l|X[l]|r|}
+\hline
+Nummerierung & Bezeichnung & Samples \\
+\hline
+- & Sonstiges & 19448 \\
+- & Sonstige Zusatzszeichen &  2840\\ 
+- & Sonstige Gefahrenzeichen & 1144 \\
+\hline
+\gls{VZ} 103-10 & Kurve (links) & 86 \\
+\gls{VZ} 103-20 & Kurve (rechts) & 140 \\
+\gls{VZ} 105-10 & Doppelkurve (zunächst links) & 16 \\
+\gls{VZ} 105-20 & Doppelkurve (zunächst rechts) & 58 \\
+\gls{VZ} 120 & Beidseitig verengte Fahrbahn & 21 \\
+\gls{VZ} 121-10 & Einseitig rechts verengte Fahrbahn & 7 \\
+\gls{VZ} 121-20 & Einseitig links verengte Fahrbahn & 2 \\
+\gls\gls{VZ} 123 & Baustelle & 188 \\
+\gls{VZ} 131 & Lichtzeichenanlage & 187 \\
+\gls{VZ} 133 & Fußgänger & 5 \\
+\gls{VZ} 134 & Fußgängerüberweg (Gefahrenzeichen) & 266 \\
+\gls{VZ} 136 & Kinder & 14 \\
+\hline
+\gls{VZ} 274-10 & Zulässige Höchstgeschwindigkeit 10 km/h & 3  \\
+\gls{VZ} 274-20 & Zulässige Höchstgeschwindigkeit 20 km/h &  4 \\
+\gls{VZ} 274-30 & Zulässige Höchstgeschwindigkeit 30 km/h &  224 \\
+\gls{VZ} 274-40 & Zulässige Höchstgeschwindigkeit 40 km/h & 1 \\
+\gls{VZ} 274-50 & Zulässige Höchstgeschwindigkeit 50 km/h & 347 \\
+\gls{VZ} 274-60 & Zulässige Höchstgeschwindigkeit 60 km/h & 497 \\
+\gls{VZ} 274-70 & Zulässige Höchstgeschwindigkeit 70 km/h & 1143 \\
+\gls{VZ} 274-80 & Zulässige Höchstgeschwindigkeit 80 km/h & 279 \\
+\gls{VZ} 274-100 & Zulässige Höchstgeschwindigkeit 100 km/h & 105 \\
+\gls{VZ} 274-120 & Zulässige Höchstgeschwindigkeit 120 km/h & 92 \\
+\gls{VZ} 274-130 & Zulässige Höchstgeschwindigkeit 130 km/h & 29 \\
+\hline
+\gls{VZ} 274.1 & Beginn einer Tempo-30-Zone & 134 \\
+\gls{VZ} 274.2 & Ende einer Tempo-30-Zone & 83 \\
+\hline
+\gls{VZ} 278-30 & Ende der zul. Höchstgeschw. 30 km/h & 2 \\
+\gls{VZ} 278-50 & Ende der zul. Höchstgeschw. 50 km/h &  5\\
+\gls{VZ} 278-60 & Ende der zul. Höchstgeschw. 60 km/h & 10 \\
+\gls{VZ} 278-70 & Ende der zul. Höchstgeschw. 70 km/h & 174 \\
+\gls{VZ} 278-80 & Ende der zul. Höchstgeschw. 80 km/h & 27 \\
+\hline
+\gls{VZ} 282 & Ende sämtlicher Streckenverbote & 292 \\
+\hline
+\gls{VZ} 306 & Vorfahrtsstraße & 3429 \\ 
+\hline
+\gls{VZ} 310 & Ortstafel Vorderseite (\glqq Ortseingangsschild\grqq) & 317 \\
+\gls{VZ} 311 & Ortstafel Rückseite (\glqq Ortsausgangsschild\grqq) & 289 \\ \hline
+\gls{VZ} 325.1 & Verkehrsberuhigter Bereich (\glqq Spielstraße\grqq) & 10 \\
+\gls{VZ} 325.2 & Ende eines Verkehrsberuhigten Bereiches & 8 \\
+\hline
+\gls{VZ} 330.1 & Autobahn & 20 \\
+\gls{VZ} 330.2 & Ende der Autobahn & 26 \\
+\gls{VZ} 331.1 & Kraftfahrstraße & 115 \\
+\gls{VZ} 331.2 & Ende der Kraftfahrstraße & 61 \\
+\hline
+\gls{VZ} 525-31 & Fahrstreifentafel ohne Gegenverkehr & 28 \\
+\hline
+\gls{VZ} 1001-30 & auf ... m & 36 \\
+\gls{VZ} 1001-31 & auf ... km & 125 \\
+\gls{VZ} 1001-32 & noch ... m & 3 \\
+\gls{VZ} 1001-33 & noch ... km & 12 \\
+\gls{VZ} 1004-30 & in ... m & 25 \\
+\gls{VZ} 1004-31 & in ... km & 189 \\
+\gls{VZ} 1040-30 & zeitliche Beschränkung (...-... h) & 6 \\
+\gls{VZ} 1042-31 & werktags ...-... h & 8\\
+\gls{VZ} 1053-35 & bei Nässe & 44 \\
+\hline
+Insgesamt & & 32634 \\
+\hline
+\end{longtabu}
+
+Die Anzahl in der rechten Spalte versteht sich ausschließlich als die Anzahl der selbst gelabelten Daten. Ein paar der Verkehrszeichen befinden sich auch in den von uns verwendeten Datensatz (sh. Phase 1). Die Anzahl der \glslink{Sample}{Samples} aus dem Datensatz ist \textit{nicht} mit eingeschlossen.\\
+
+Der für die \gls{Detektion} verwendete GTSDB-Datensatz beinhaltet 1213 Verkehrszeichen. Der ganze Datensatz wurde um ca. 32.000 \gls{Sample}s erweitert, wobei davon einige Verkehrszeichen komplett neu sind, wie z.B. Ortstafeln. Andererseits sind auch rund 20.000 Verkehrszeichen enthalten, an denen kein eigentliches Interesse liegt. Diese trugen jedoch dazu bei, irrelevante Verkehrszeichen zu differenzieren, indem diese auf eine eigene Klassen trainiert werden.
+\newpage
+\section{Verwendete Klassen für die Detektion}
+\label{sec:klassen_detektion}
+\begin{longtabu}{|l|r|}
+\hline
+Interner Klassenname & ID \\
+\hline
+misc yellow & 1\\
+\hline
+misc blue & 2\\
+\hline
+misc brown & 3\\
+\hline
+misc green & 4\\
+\hline
+misc white & 5\\
+\hline
+misc red white & 6\\
+\hline
+misc red blue& 7\\
+\hline
+speed& 8\\
+\hline
+nospeed& 9\\
+\hline
+speedmax& 10\\
+\hline
+additional& 11\\
+\hline
+town& 12\\
+\hline
+board& 13\\
+\hline
+danger& 14\\
+\hline
+priority& 15\\
+\hline
+\end{longtabu}
+\pagebreak
+
+\printnoidxglossary[type=\acronymtype,numberedsection=autolabel] 
+
+\end{appendix}

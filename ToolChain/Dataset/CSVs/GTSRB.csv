@@ -1,0 +1,44 @@
+from,to,comment
+00000,speed,
+00001,speed,
+00002,speed,
+00003,speed,
+00004,speed,
+00005,speed,
+00006,speed,
+00007,speed,
+00008,speed,
+00009,misc red white,Überholverbot
+00010,misc red white,Überholverbot LKW
+00011,danger,Gefahr Kreuzung
+00012,priority,Vorfahrt
+00013,misc red white,Vorfahrt gewähren
+00014,misc red white,Stop
+00015,misc red white,Durchfahr Verbot -> Son weiss/rot
+00016,misc red white,Durchfahr Verbot LKW
+00017,misc red white,Einfahr Verbot
+00018,danger,Gefahr !
+00019,danger,Gefahr Kurve Links
+00020,danger,Gefahr Kurve Rechts
+00021,danger,Doppelkurve Links-Rechts
+00022,danger,Gefahr Bodenwelle
+00023,danger,Rutschgefahr
+00024,danger,Fahrbahn verengung rechts
+00025,danger,Baustelle
+00026,danger,Gefahr Ampel
+00027,danger,Gefahr ?Fußgänger? ein Mensch auf Schild
+00028,danger,Gefahr Mensch mit Kind?
+00029,danger,Gefahr Fahrrad
+00030,danger,Gefahr Schnee
+00031,danger,Gefahr Wildwechsel
+00032,nospeed,Aufhebung aller streckenverbote
+00033,misc blue,Blau rechts Kurve
+00034,misc blue,Blau links Kurve
+00035,misc blue,Blau gerade
+00036,misc blue,Blau gerade u. rechts
+00037,misc blue,Blau gerade u. links
+00038,misc blue,Blau rechts schräg
+00039,misc blue,Blau links schräg
+00040,misc blue,Kreisverkehr
+00041,misc white,Aufhebung Überholverbot son.weiss
+00042,misc white,Aufhebung Überholverbot LKW

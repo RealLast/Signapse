@@ -1,0 +1,149 @@
+\documentclass[12pt,a4paper,english,enabledeprecatedfontcommands]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{graphicx}
+\usepackage{float}
+\renewcommand{\familydefault}{\sfdefault} % hier sieht serifenfreie Schrift ausnahmsweise mal besser aus
+\DeclareTextFontCommand{\emph}{\bfseries\em}
+
+\title{User Manual (english)\\Signapse\\Traffic Sign Detection}
+\begin{document}
+\maketitle
+
+\section{Legal}
+
+\subsection{Disclaimer}
+
+This app is in beta state and only for testing purposes. The usage of this app is at your own risk.\\
+This app was delevoped with greatest thoroughness. As publishers of this app however we cannot guarantee the completeness, correctness and reliability of the provided contents and functions. The usage of this app and of its functions is at your own risk. It is not a substitute for your own attention. Always pay attention to your environment and other traffic participants and do not operate the device and the app while driving.
+
+\subsection{Data Privacy}
+The complete privacy policy can be found at the following link:\\
+\url{https://sites.google.com/view/tsd-privacy-policy/english-englisch-privacy-policy}
+
+\subsection{Used Licences}
+
+\subsubsection{MobileNetV2}
+Copyright \textcopyright 2018, Larry\\
+MIT Licence
+
+\subsubsection{OpenCV}
+Copyright \textcopyright 2000-2018, Intel Corporation, all rights reserved.\\
+Copyright \textcopyright 2009-2011, Willow Garage Inc., all rights reserved.\\
+Copyright \textcopyright 2009-2016, NVIDIA Corporation, all rights reserved.\\
+Copyright \textcopyright 2010-2013, Advanced Micro Devices, Inc., all rights reserved.\\
+Copyright \textcopyright 2015-2016, OpenCV Foundation, all rights reserved.\\
+Copyright \textcopyright 2015-2016, Itseez Inc., all rights reserved.\\
+Third party copyrights are property of their respective owners.\\
+BSD Licence
+
+\subsubsection{Single Shot Multibox Detector}
+All new contributions compared to the original branch:\\
+Copyright \textcopyright 2015, 2016, Wei Liu (UNC Chapel Hill), Dragomir Anguelov (Zoox), Dumitru Erhan (Google), Christian Szegedy (Google), Scott Reed (UMich Ann Arbor), Cheng-Yang Fu (UNC Chapel Hill), Alexander C. Berg (UNC Chapel Hill). All rights reserved.\\
+All contributions by the University of California: Copyright \textcopyright 2014, 2015, The Regents of the University of California (Regents). All rights reserved.\\
+All other contributions:\\
+Copyright \textcopyright 2014, 2015, the respective contributors. All rights reserved.\\
+
+\subsubsection{TensorFlow}
+Copyright \textcopyright 2018, The TensorFlow Authors. All rights reserved.\\
+Apache License 2.0
+
+\section{Minimum Hardware And Software Requirements}
+
+\begin{tabular}{l X[l]}
+
+OS: & Android 7.0 \textit{Nougat} (API version 24) or higher\\
+CPU: & Qualcomm Snapdragon 600/800-series or similar\\
+Memory: & 3 GiB RAM, 512 MiB free storage memory\\
+Other: & GPS receiver, camera with image stabilization\\
+
+\end{tabular}
+\linebreak
+
+\section{Installing}
+
+\subsection{Installing From Google Play Store}
+
+Download the \textit{Signapse} app from the Google Play Store and follow the instructions on the screen.\\
+\url{https://play.google.com/store/apps/details?id=de.swp.tsd.trafficsigndetection}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{Benutzerhandbuch/qrcode.png}
+\end{figure}
+
+
+
+\subsection{Installing from APK}
+
+To install the APK, it may be necessary to allow the installation of apps from unknown sources. 
+
+\subsubsection{Android 7.0 \textit{Nougat} to 7.1.2 \textit{Nougat}}
+Installation of apps from unknown sources can be permitted in the settings of your device:\\
+Settings $\rightarrow$ Security $\rightarrow$ Unknown sources\\
+Use a file manager app of your choice, navigate to the file path of the \textit{Signapse} app's APK, install it, and follow the instructions on the screen.
+
+\subsubsection{Android 8.0 \textitt{Oreo} and newer}
+Installing apps on Android 8.0 \textit{Oreo} and newer is attached to giving another app the permission to do so. Use a file manager app of your choice and grant it the permissions to install other apps. Then, navigate to the file path of the \textit{Signapse} app's APK, install it, and follow the instructions on the screen.
+
+\section{Necessary Permissions}
+
+To ensure that the app will work properly, the user needs to grant up to two permissions to it.
+
+\subsubsection*{Access Camera} Access to the device's camera is absolutely vital for the \textit{Signapse} app to work at all. If the user does not grant permission to the camera, then it cannot utilize it to take pictures, and therefore is not able to detect any traffic signs.
+
+\subsubsection*{Access Fine Location} This permission is optional. The users can reject this permission if they do not want to let the app to determine their current speed using GPS. If the user decides to reject this permission, the \textit{Signapse} app will still be able to detect and display the traffic signs.
+
+\section{Operating Conditions}
+
+The \textit{Signapse} app will reliably detect and display traffic signs of German roads and motorways according to StVO §§ 36-43. The functionality is limited to traffic signs that affect the current speed limit and/or the purview of the current speed limit.\\
+
+Correct functionality of the app can \emph{not} be ensured if one or more of the following criteria is met.
+
+\begin{itemize}
+    \item The user exceeds a speed of 150 km/h (90 mph)
+    \item The traffic signs are not mounted according to VwV-StVO §§ 39-43
+    \item Fog, rainfall, snowfall, strong frontlighting
+    \item The device has not been set up correctly according to the calibration menu
+    \item The windscreen is dirty
+\end{itemize}
+
+\section{Getting Started}
+
+Use a smartphone holder for your car to mount the device in landscape mode on the windscreen. To ensure that the system is working properly, the device has to be calibrated. The users will be given a series of instructions after they acknowledged and accepted the legal disclaimer on startup. They should follow these instructions and rotate the phone until a green checkmark ($\checkmark$) is visible in the lower right on the display. \\
+
+It may be necessary to connect your phone to a power source - e.g. the car's USB socket, the 12 V socket or a power bank. The power source has to have enough power to supply 2 A at 5 V continuously. If the battery level does not drop while the \textit{Signapse} app is in use, the power source is sufficient.
+
+\section{Use}
+\label{sec:use}
+
+The \textit{Signapse} app consists of three menus:
+
+\begin{description}
+    \item[Calibration] The calibration phase described previously is realized in this menu. The users can open or close this menu at any time if they reckon a recalibration is necessary. A recalibration may especially be necessary if the detection rate is insufficient. If the calibration menu is exited before the device is set up properly, correct functionality cannot be ensured.
+    
+    \item[Detector] The detector menu serves for the main function. In the left half, the current traffic sign is displayed among the current speed; in the right half, a history of the previous traffic signs is displayed. The length of the history can be changed in the settings menu.
+    
+   \item[Settings] The length of the history in the detector menu can be changed here. The GPS speed display can be enabled/disabled here.
+
+\end{description}
+
+\section{Troubleshooting}
+
+\subsubsection*{A tilde is being shown instead of a speed}
+The speed display has been disabled in the  app or the necessary permission has not been granted. Enable the speed display in the settings menu of the app and make sure that the \textit{Signapse} app has been granted the location access permission.
+
+\subsubsection*{The speed display always reads 0 km/h}
+The speed display has been enabled in the app and the location access permission has been granted, but the location has been disabled in the phone's settings. Enable the location on your smartphone and restart the app.
+
+\subsubsection*{The traffic signs are only being detected very infrequently}
+The operating conditions are not met. Make sure that the device is set up correctly and check if the weather even allows a correct detection of the traffic signs for the app. If the latter is not possible, you cannot use it.
+
+\subsubsection*{No traffic signs are being detected at all}
+The app has not been granted the permission for the camera, or the camera lens is obstructed. Grant the camera permission for the \textit{Signapse} app and make sure that the smartphone mount or other objects near the wind screen do not obstruct the camera lens.
+
+\subsubsection*{The detector is not available}
+The interface the app uses to access the neural networks could not be initialized. Reinstall the app; if the error persists, please contact the developers.
+
+\end{document}

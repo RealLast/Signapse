@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/disclaimerAcceptDocument"
+            layout="@layout/disclaimer_document"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_4x"
+            android:layout_marginRight="@dimen/base_4x"
+            android:layout_marginTop="@dimen/base_16x"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/disclaimerAcceptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_4x"
+            android:layout_marginStart="@dimen/base_4x"
+            android:layout_marginTop="@dimen/base_4x"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:elevation="@dimen/base_1x"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="onDisclaimerAccepted"
+            android:paddingEnd="@dimen/base_2x"
+            android:paddingStart="@dimen/base_2x"
+            android:text="@string/legal_disclaimer_accept"
+            android:textColor="@color/onPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/disclaimerAcceptDocument" />
+
+        <TextView
+            android:id="@+id/disclaimerRefuseTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/base_2x"
+            android:layout_marginStart="@dimen/base_4x"
+            android:text="@string/disclaimer_refuse_hint"
+            android:textSize="18sp"
+            android:textColor="@color/onBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/disclaimerAcceptButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/disclaimerAcceptButton"
+            app:layout_constraintTop_toTopOf="@+id/disclaimerAcceptButton" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

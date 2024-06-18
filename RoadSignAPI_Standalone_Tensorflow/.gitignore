@@ -1,0 +1,17 @@
+CMakeFiles/*
+CMakeFiles
+dependencies
+dependencies/*
+*.tgz
+*.zip
+*.pb
+*.png
+*.bmp
+*.jpg
+*.jpeg
+*.cmake
+*.make
+CMakeCache.txt
+rsapi
+*.o
+*.o.d

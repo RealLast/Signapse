@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    android:id="@+id/settingsScrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/settingsGpsCard"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/base_2x"
+            android:layout_marginEnd="@dimen/base_2x"
+            android:layout_marginStart="@dimen/base_2x"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/card_background"
+            android:clipChildren="true"
+            android:elevation="@dimen/base_1x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/settingsThresholdCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Switch
+                android:id="@+id/gpsSwitch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_4x"
+                android:text="@string/settings_speed_tracker_label"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="@color/onBackground"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_4x"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gpsSwitch">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/gpsTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_2x"
+                        android:text="@string/location_permission_decline_text"
+                        android:textAppearance="@android:style/TextAppearance.Material.Small"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/gpsHintTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_2x"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/location_permission_decline_text_hint"
+                        android:textAppearance="@android:style/TextAppearance.Material.Small"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gpsTextView" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/settingsThresholdCard"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/base_2x"
+            android:background="@drawable/card_background"
+            android:clipChildren="true"
+            android:elevation="@dimen/base_1x"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsGpsCard"
+            app:layout_constraintEnd_toStartOf="@+id/settingsHistoryCard"
+            app:layout_constraintTop_toTopOf="@+id/settingsGpsCard">
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_4x"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_4x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/thresholdTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/warning_threshold_label"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textColor="@color/onBackground"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <SeekBar
+                        android:id="@+id/thresholdSeekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:thumb="@drawable/seekbar_thumb"
+                        app:layout_constraintEnd_toStartOf="@+id/thresholdValueTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/thresholdTextView" />
+
+                    <TextView
+                        android:id="@+id/thresholdValueTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/base_4x"
+                        app:layout_constraintBottom_toBottomOf="@+id/thresholdSeekBar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/thresholdSeekBar" />
+
+                    <TextView
+                        android:id="@+id/thresholdHintTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_2x"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/warning_threshold_positive_hint"
+                        android:textAppearance="@android:style/TextAppearance.Material.Small"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/thresholdSeekBar" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/settingsHistoryCard"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/base_2x"
+            android:background="@drawable/card_background"
+            android:clipChildren="true"
+            android:elevation="@dimen/base_1x"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsGpsCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/settingsGpsCard">
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_4x"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_4x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/historyTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/history_sign_count_border"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textColor="@color/onBackground"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <SeekBar
+                        android:id="@+id/historySeekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/base_4x"
+                        android:layout_marginTop="16dp"
+                        android:thumb="@drawable/seekbar_thumb"
+                        app:layout_constraintEnd_toStartOf="@+id/historyMaxSizeTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/historyTextView" />
+
+                    <TextView
+                        android:id="@+id/historyMaxSizeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/historySeekBar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/historySeekBar" />
+
+                    <TextView
+                        android:id="@+id/historyHintTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_2x"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/history_hint"
+                        android:textAppearance="@android:style/TextAppearance.Material.Small"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/historySeekBar" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</HorizontalScrollView>

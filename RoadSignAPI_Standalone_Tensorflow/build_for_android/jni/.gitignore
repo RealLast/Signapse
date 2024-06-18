@@ -1,0 +1,7 @@
+genfiles
+genfiles/*
+include
+include/*
+libs
+libs/*
+opencv-android-sdk/*

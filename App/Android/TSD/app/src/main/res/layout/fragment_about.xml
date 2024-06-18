@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/developmentAboutCard"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/base_2x"
+            android:layout_marginBottom="@dimen/base_2x"
+            android:layout_marginEnd="@dimen/base_2x"
+            android:layout_marginStart="@dimen/base_2x"
+            android:layout_marginTop="@dimen/base_2x"
+            android:background="@drawable/card_background"
+            android:clipChildren="true"
+            android:elevation="@dimen/base_1x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/privacyAboutCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/developmentLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_4x"
+                android:text="@string/development_label"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="@color/onBackground"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_4x"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/developmentLabelTextView">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/developmentHintTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/development_hint"
+                        android:textColor="@color/onBackground"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/developerLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/base_4x"
+                        android:text="@string/development_team_label"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textColor="@color/onBackground"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/developmentHintTextView" />
+
+                    <TextView
+                        android:id="@+id/developerTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_2x"
+                        android:layout_marginTop="@dimen/base_2x"
+                        android:text="@string/development_team"
+                        android:textColor="@color/onBackground"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@+id/developerLabelTextView"
+                        app:layout_constraintStart_toStartOf="@+id/developerLabelTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/developerLabelTextView" />
+
+
+                    <TextView
+                        android:id="@+id/supervisionLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/base_4x"
+                        android:text="@string/development_supervision_label"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textColor="@color/onBackground"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/developerTextView" />
+
+                    <TextView
+                        android:id="@+id/supervisionTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_2x"
+                        android:layout_marginTop="@dimen/base_2x"
+                        android:text="@string/development_supervision"
+                        android:textColor="@color/onBackground"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@+id/supervisionLabelTextView"
+                        app:layout_constraintStart_toStartOf="@+id/supervisionLabelTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/supervisionLabelTextView" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/privacyAboutCard"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/base_2x"
+            android:layout_marginBottom="@dimen/base_2x"
+            android:layout_marginStart="@dimen/base_2x"
+            android:layout_marginEnd="@dimen/base_2x"
+            android:layout_marginTop="@dimen/base_2x"
+            android:background="@drawable/card_background"
+            android:clipChildren="true"
+            android:elevation="@dimen/base_1x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/disclosureAboutCard">
+
+
+            <TextView
+                android:id="@+id/privacyLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_4x"
+                android:text="@string/privacy_display_name"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="@color/onBackground"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_4x"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/privacyLabelTextView">
+
+                <include
+                    android:id="@+id/disclaimerAcceptDocument"
+                    layout="@layout/privacy_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/disclosureAboutCard"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/base_2x"
+            android:layout_marginBottom="@dimen/base_2x"
+            android:layout_marginStart="@dimen/base_2x"
+            android:layout_marginEnd="@dimen/base_2x"
+            android:layout_marginTop="@dimen/base_2x"
+            android:background="@drawable/card_background"
+            android:clipChildren="true"
+            android:elevation="@dimen/base_1x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/disclaimerAboutCard">
+
+
+            <TextView
+                android:id="@+id/disclosureLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_4x"
+                android:text="@string/disclosure_display_name"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="@color/onBackground"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_4x"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/disclosureLabelTextView">
+
+                <include
+                    android:id="@+id/disclosureAcceptDocument"
+                    layout="@layout/disclosure_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/disclaimerAboutCard"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/base_2x"
+            android:layout_marginBottom="@dimen/base_2x"
+            android:layout_marginEnd="@dimen/base_2x"
+            android:layout_marginStart="@dimen/base_2x"
+            android:layout_marginTop="@dimen/base_2x"
+            android:background="@drawable/card_background"
+            android:clipChildren="true"
+            android:elevation="@dimen/base_1x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/disclaimerLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_4x"
+                android:text="@string/disclaimer_display_name"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="@color/onBackground"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/base_4x"
+                android:layout_marginEnd="@dimen/base_4x"
+                android:layout_marginStart="@dimen/base_4x"
+                android:layout_marginTop="@dimen/base_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/disclaimerLabelTextView">
+
+                <include
+                    android:id="@+id/disclaimerAcceptDocument"
+                    layout="@layout/disclaimer_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</HorizontalScrollView>

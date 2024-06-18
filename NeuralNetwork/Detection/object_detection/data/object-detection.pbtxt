@@ -1,0 +1,74 @@
+item {
+  id: 1
+  name: 'misc yellow'
+}
+
+item {
+  id: 2
+  name: 'misc blue'
+}
+
+item {
+  id: 3
+  name: 'misc brown'
+}
+
+item {
+  id: 4
+  name: 'misc green'
+}
+
+item {
+  id: 5
+  name: 'misc white'
+}
+
+item {
+  id: 6
+  name: 'misc red white'
+}
+
+item {
+  id: 7
+  name: 'misc red blue'
+}
+
+item {
+  id: 8
+  name: 'speed'
+}
+
+item {
+  id: 9
+  name: 'nospeed'
+}
+
+item {
+  id: 10
+  name: 'speedmax'
+}
+
+item {
+  id: 11
+  name: 'additional'
+}
+
+item {
+  id: 12
+  name: 'town'
+}
+
+item {
+  id: 13
+  name: 'board'
+}
+
+item {
+  id: 14
+  name: 'danger'
+}
+
+item {
+  id: 15
+  name: 'priority'
+}

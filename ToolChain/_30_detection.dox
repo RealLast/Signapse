@@ -1,0 +1,40 @@
+/**@page detectionPage Training des Detektionsnetzwerks
+ * 
+ * Zum Training wird eine angepasste Version der TensorFlow Object Detection API benutzt.
+ * Um das Training zu beschleunigen werden vortrainierte Gewichte benutzt.\n 
+ * (siehe https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
+ * \n\n
+ * Diese befinden sich im Ordner `NeuralNetwork/Detection/object_detection/SSDLite/`.
+ * \n\n
+ * Trainingsparameter wie z.B. die Lernrate können in der vorhandenen `pipeline.config` geändert werden.
+ * \n\n
+ * Außerdem muss der Datensatz erneut umgewandelt werden, da TensorFlow diesen in einem speziellen Format benötigt. Das Skript unter `NeuralNetwork/Detection/object_detection/SSDLite/utils` ermöglicht dies mit folgender Kommandozeileneingabe:
+ * \n
+ * `python generate_tfrecord.py --csv_input=labels.csv --output_path=output.record`
+ * \n\n
+ * Hierbei müssen in der `labels.csv` die entsprechenden Metadaten enthalten sein.
+ * Außerdem müssen die Übersetzungen in Klassennummern ab Zeile 30 ggf. angepasst werden.
+ * In Zeile 90 muss noch der Ordner mit den Bildern, welche in einer Größe von 300x300 vorliegen angegeben werden.
+ * \n\n
+ * Die generierten `test.record` bzw. `training.record` Dateien müssen in den Ordner `NeuralNetwork/Detection/object_detection/data/` kopiert werden. Eventuell sind hier Anpassungen in der `pipeline.config` nötig.
+ * \n\n
+ * Anschließend kann das Trainig aus dem NeuralNetwork/Detection/object_detection/ Ordner wie folgt gestartet werden:
+ * \n
+ * ´python train.py  --logtostderr --train_dir=training_dir/ --pipeline_config_path=SSDLite/pipeline.config´
+ * \n\n
+ * Hierbei werden die Trainigsparameter aus der pipeline.config benutzt und die verschiedenen checkpoints in dem training_dir/ gespeichert.
+ * \n\n
+ * Der Verlauf des Trainings kann wie folgt angezeigt werden:
+ * \n
+ * `tensorboard --logdir='training_dir/`
+ * \n\n
+ * Dies öffnet einen Webserver auf _Port 6006_, auf welchem die Graphen dargestellt werden können.
+ * \n\n
+ * Wenn man sich für einen Checkpoint entschieden hat, kann dieser in eine _Protobuf-Datei_ umgewandelt werden, welche für die App verwendet werden kann. Dies kann über das Skript aus dem Ordner `NeuralNetwork/Detection/` wie folgt ausgeführt werden:
+ * \n
+ * `python object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path object_detection/SSDLite/pipeline.config --trained_checkpoint_prefix object_detection/training/model.ckpt-nummer --output_directory object_detection/output/`
+ * \n\n
+ * Hierbei wird erneut die `pipeline.config` verwendet, da die auch Allgemeine Infos über das Netzwerk beinhält. Außerdem wird bei `--trained_checkpoint_prefix object_detection/training/model.ckpt-nummer` die Nummer durch den entsprechenden checkpoint ersetzt z.B. model.ckpt-43456
+ * Nach ausführung des Skriptes liegt im Ordner `NeuralNetwork/Detection/object_detection/output/` eine Datei names `frozen_graph.py`, welcher das Netzwerk in dem Format beinhaltet, so dass es von der App verwendet werden kann.
+ *
+**/       

@@ -1,0 +1,108 @@
+from,to,comment
+"(Sonstiges, weiss)",Misc,Pool der sonstigen Klassen
+"(Sonstiges, rot/weiss)",Misc,Pool der sonstigen Klassen
+"(Sonstiges, rot/blau)",Misc,Pool der sonstigen Klassen
+"(Sonstiges, blau)",Misc,Pool der sonstigen Klassen
+"(Sonstiges, gelb)",Misc,Pool der sonstigen Klassen
+"(Sonstiges, gruen)",Misc green,Pool der sonstigen Klassen
+"(Sonstiges, braun)",Misc brown,Pool der sonstigen Klassen
+"Vorfahrt",VZ 306,Eigentlich Vorfahrtstraße
+"Zusatzschild",VZ 1000,Eigentlich Zusatzzeichen; generischer Pool
+"5 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-5,
+"10 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-10,
+"20 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-20,
+"30 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-30,
+"40 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-40,
+"50 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-50,
+"60 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-60,
+"70 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-70,
+"80 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-80,
+"90 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-90,
+"100 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-100,
+"110 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-110,
+"120 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-120,
+"130 km/h, Beginn - Hoechstgeschwindigkeit",VZ 274-130,
+"5 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-5,
+"10 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-10,
+"20 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-20,
+"30 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-30,
+"40 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-40,
+"50 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-50,
+"60 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-60,
+"70 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-70,
+"80 km/h, Beginn - Mindestgeschwindigkeit",VZ 275-80,
+"5 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-5,
+"10 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-10,
+"20 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-20,
+"30 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-30,
+"40 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-40,
+"50 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-50,
+"60 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-60,
+"70 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-70,
+"80 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-80,
+"90 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-90,
+"100 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-100,
+"110 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-110,
+"120 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-120,
+"130 km/h, Ende - Hoechstgeschwindigkeit",VZ 278-130,
+"5 km/h, Ende - Mindestgeschwindigkeit",VZ 279-5,
+"10 km/h, Ende - Mindestgeschwindigkeit",VZ 279-10,
+"20 km/h, Ende - Mindestgeschwindigkeit",VZ 279-20,
+"30 km/h, Ende - Mindestgeschwindigkeit",VZ 279-30,
+"40 km/h, Ende - Mindestgeschwindigkeit",VZ 279-40,
+"50 km/h, Ende - Mindestgeschwindigkeit",VZ 279-50,
+"60 km/h, Ende - Mindestgeschwindigkeit",VZ 279-60,
+"70 km/h, Ende - Mindestgeschwindigkeit",VZ 279-70,
+"80 km/h, Ende - Mindestgeschwindigkeit",VZ 279-80,
+"Ende saemtlicher Streckenverbote",VZ 282,
+"20er-Zone, Beginn",VZ 274.1-20,
+"30er-Zone, Beginn",VZ 274.1,
+"20er-Zone, Ende",VZ 274.2-20,
+"30er-Zone, Ende",VZ 274.2,
+"Ortseingangsschild",VZ 310,Eigentlich Ortstafel Vorderseite
+"Ortsausgangsschild",VZ 311,Eigentlich Ortstafel Rückseite
+"Spielstrasse, Beginn",VZ 325.1,Eigentlich Beginn eines verkehrsberuhigten Bereichs
+"Spielstrasse, Ende",VZ 325.2,Eigentlich Ende eines verkehrsberuhigten Bereichs
+"Autobahn, Beginn",VZ 330.1,
+"Autobahn, Ende",VZ 330.2,
+"Kraftfahrstrasse, Beginn",VZ 331.1,
+"Kraftfahrstrasse, Ende",VZ 331.2,
+"Fahrstreifentafel ohne Gegenverkehr - zweistufig (Hoechstgeschwindigkeit)",VZ 523-30,
+"Fahrstreifentafel ohne Gegenverkehr - dreistreifig (Hoechstgeschwindigkeit)",VZ 523-31,
+"Fahrstreifentafel ohne Gegenverkehr - zweistreifig (Mindestgeschwindigkeit)",VZ 525-31,Eigentlich dreifstreifig!!!
+"Fahrstreifentafel mit Gegenverkehr - zweistreifig in Fahrtrichtung und einstreifig in Gegenrichtung (Mindestgeschwindigkeit)",VZ 526-31
+"Fahrstreifentafel mit Gegenverkehr - zweistreifig in Fahrtrichtung und zweistreifig in Gegenrichtung (Mindestgeschwindigkeit)",VZ 526-33
+"auf ... m",VZ 1001-30,
+"auf ... km",VZ 1001-31,
+"noch ... km",VZ 1001-33,
+"nach ... m",VZ 1001-32,
+"in ... km",VZ 1004-30,
+"in ... m",VZ 1004-31,
+"zeitliche Beschraenkung (16-18 h)",VZ 1040-30
+"zeitliche Beschraenkung (8-11 h, 16-18 h)",VZ 1040-31
+"ab Zeitpunkt",VZ 1040-34
+"Laermschutz mit Zeitangabe",VZ 1040-35
+"Schulweg in Verbindung mit zeitlicher Begrenzung",VZ 1040-36
+"werktags",VZ 1042-30
+"werktags 18-19 h",VZ 1042-31
+"werktags 8.30-11.30 h, 16-18 h",VZ 1042-32
+"werktags ...-...",VZ 1042-31
+"werktags ...-..., ...-...",VZ 1042-32
+"Mo-Fr, 16-18 h",VZ 1042-33
+"Di, Do, Fr, 16-18 h",VZ 1042-34
+"6-22 h an Sonn- und Feiertagen",VZ 1042-35
+"werktags ausser samstags",VZ 1042-38
+"Sa und So",VZ 1042-51
+"Schulweg in Verbindung mit zeitlicher Begrenzung an Werktagen",VZ 1042-53
+"bei Naesse",VZ 1053-35
+"Baustelle",VZ 123
+"Doppelkurve (zunaechst links)",VZ 105-10
+"Doppelkurve (zunaechst rechts)",VZ 105-20
+"Fahrbahnverengung (links)",VZ 121-20
+"Fahrbahnverengung (rechts)",VZ 121-10
+"Fahrbahnverengung (beidseitig)",VZ 120
+"Kurve (links)",VZ 103-10
+"Kurve (rechts)",VZ 103-20
+"Lichtzeichenanlage",VZ 131
+"Fussgaengerueberweg (Gefahrenzeichen)",VZ 101-11
+"Gefahrenzeichen",VZ 101

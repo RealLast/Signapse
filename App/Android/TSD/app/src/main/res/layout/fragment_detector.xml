@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cutOffWarningLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_4x"
+        android:layout_marginTop="@dimen/base_4x"
+        android:alpha="0.85"
+        android:background="@drawable/cutoff_warning_background"
+        android:elevation="@dimen/base_3x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainCardView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cutOffWarningIconView"
+            android:layout_width="@dimen/base_6x"
+            android:layout_height="@dimen/base_6x"
+            android:layout_marginBottom="@dimen/base_4x"
+            android:layout_marginStart="@dimen/base_4x"
+            android:layout_marginTop="@dimen/base_4x"
+            android:src="@drawable/ic_error"
+            app:layout_constraintBottom_toBottomOf="@+id/cutOffWarningTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cutOffWarningTextView" />
+
+        <TextView
+            android:id="@+id/cutOffWarningTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/base_2x"
+            android:layout_marginEnd="@dimen/base_4x"
+            android:layout_marginStart="@dimen/base_4x"
+            android:layout_marginTop="@dimen/base_2x"
+            android:text="@string/cut_off_speed_warning"
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/onAccent"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cutOffWarningIconView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <include
+        android:id="@+id/mainCardView"
+        layout="@layout/sign_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/base_2x"
+        android:elevation="@dimen/base_2x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/historyView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/base_2x"
+        android:layout_marginTop="@dimen/base_2x"
+        android:elevation="@dimen/base_0.25x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainCardView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

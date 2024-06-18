@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#46F278</color>
+    <color name="primaryDark">#3FD96B</color>
+    <color name="accent">#CC0000</color>
+    <color name="accentDark">#B20000</color>
+
+    <color name="background">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="onAccent">#FFFFFF</color>
+    <color name="onBackground">#000000</color>
+    <color name="onBackgroundLight">#AAAAAA</color>
+    <color name="onSurface">#000000</color>
+    <color name="onSurfaceLight">#AAAAAA</color>
+</resources>

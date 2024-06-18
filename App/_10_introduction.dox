@@ -1,0 +1,5 @@
+/**@page introPage Einleitung
+ * Die App ist aus einzelnen Komponenten, im Android-Jargon auch als _Fragmente_ bezeichnet werden. Zu jedem Fragment gehört ein UI sowie mindestens eine Java-Klasse, wodurch die zugehörige Funktionalität realisiert wird. Im Allgemeinen können mehrere Fragmente gleichzeitig aktiv sein, aber für dieses Projekt wurde sich dafür entschieden, nur höchstens ein aktives Fragment gleichzeitig zuzlassen. Der Grund liegt darin, dass die in einzelne Fragmente ausgelagerte Funktionalitäten in der Anwendung später disjunkt sind, so kann das System beispielsweise nicht gleichzeitig kalibriert und verwendet werden. Die Entscheidung für solche Fragmente lag darin, dass die App ggf. in Zukunft um weitere Funktionalitäten erweitert werden kann.
+ *
+ *
+**/

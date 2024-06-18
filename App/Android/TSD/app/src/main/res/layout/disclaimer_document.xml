@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/betaHintTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/beta_heading_label"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/disclaimerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/disclaimer_text"
+        android:textColor="@color/onBackground"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/base_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/betaHintTextView"/>
+
+</android.support.constraint.ConstraintLayout>
